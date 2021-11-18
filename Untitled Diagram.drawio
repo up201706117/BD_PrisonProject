@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-18T18:00:41.375Z" agent="5.0 (Windows)" etag="nabCcSFM3Kik_hVKO-5S" version="15.8.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-18T18:06:11.397Z" agent="5.0 (Windows)" etag="f4MHE515v1qt4Hlkz_Y9" version="15.8.2" type="github">
   <diagram id="kgcrtWVFsiGZsjyP_v5N" name="Page-1">
     <mxGraphModel dx="1422" dy="1988" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -361,6 +361,24 @@
           <mxGeometry x="1" relative="1" as="geometry">
             <mxPoint x="13" y="18" as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="1eANcThrR3IjL-EW0r3--88" value="Notações corretas?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="-140" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1eANcThrR3IjL-EW0r3--89" value="Devemos ter associações ternárias? de onde as podemos retirar?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="-80" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1eANcThrR3IjL-EW0r3--90" value="Falta adicionar classes de associação, nomeadamente com datos da visita e de visitas ao médico" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="-110" width="560" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1eANcThrR3IjL-EW0r3--91" value="Agregação e Composição?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="-50" width="170" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1eANcThrR3IjL-EW0r3--93" value="Associação qualificada para Guardas-Corridor dependendo da experiencia?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1026" y="-10" width="430" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1eANcThrR3IjL-EW0r3--94" value="Associação qualificada para Preso e a respetiva cela de 1 ou 4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="22" width="360" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
