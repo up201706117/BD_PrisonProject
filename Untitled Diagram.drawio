@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-19T16:29:23.948Z" agent="5.0 (Windows)" etag="ytjx_thwRg0cxy6dVW6w" version="15.8.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-19T16:30:32.716Z" agent="5.0 (Windows)" etag="cmmZxY4wIVrz4QczQB_R" version="15.8.2" type="github">
   <diagram id="kgcrtWVFsiGZsjyP_v5N" name="Page-1">
-    <mxGraphModel dx="1422" dy="1988" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="1949" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -9,7 +9,7 @@
             <mxRectangle x="667" y="291" width="60" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WiG1OMdd3NblhOqTEnWN-106" value="NumOfCorridor" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0" parent="WiG1OMdd3NblhOqTEnWN-1" vertex="1">
+        <mxCell id="WiG1OMdd3NblhOqTEnWN-106" value="CorridorNum" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=0" parent="WiG1OMdd3NblhOqTEnWN-1" vertex="1">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="WiG1OMdd3NblhOqTEnWN-5" value="Corridor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
@@ -356,8 +356,11 @@
         <mxCell id="OeQMOMJpHTBnQZHW05JC-3" value="&lt;div&gt;Inmate&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
           <mxGeometry x="210" y="480" width="30" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="Ul0qZU3a8ftqUroAYZjZ-1" value="Retirar os IDs desnecessários que não são justificados pelo conceito" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="Ul0qZU3a8ftqUroAYZjZ-1" value="Retirar os IDs desnecessários que não são justificados pelo conceito" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="827" y="600" width="400" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="WomE-vGrTxZyvNzwaaTZ-1" value="&lt;div&gt;Faz sentido ter gravidade?&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="900" width="160" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
