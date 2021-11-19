@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-19T16:12:59.728Z" agent="5.0 (Windows)" etag="UGZFKMkq6YADb-bVBShs" version="15.8.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-19T16:13:16.157Z" agent="5.0 (Windows)" etag="FASFeKZ4XRzzFWG7ft4L" version="15.8.2" type="github">
   <diagram id="kgcrtWVFsiGZsjyP_v5N" name="Page-1">
     <mxGraphModel dx="677" dy="1540" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -380,7 +380,7 @@
         <mxCell id="1eANcThrR3IjL-EW0r3--94" value="Associação qualificada para Preso e a respetiva cela de 1 ou 4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="1030" y="22" width="360" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="OeQMOMJpHTBnQZHW05JC-3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+        <mxCell id="OeQMOMJpHTBnQZHW05JC-3" value="&lt;div&gt;Inmate&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
           <mxGeometry x="210" y="480" width="30" height="70" as="geometry" />
         </mxCell>
       </root>
