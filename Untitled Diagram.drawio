@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-21T22:59:00.541Z" agent="5.0 (Windows)" etag="d6RHwULJ17rO8Pkvji8T" version="15.8.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-21T23:06:42.854Z" agent="5.0 (Windows)" etag="Fq3bglD4fG2wIaL1bEfv" version="15.8.3" type="github">
   <diagram id="kgcrtWVFsiGZsjyP_v5N" name="Page-1">
     <mxGraphModel dx="1422" dy="1988" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -37,7 +37,7 @@
           <mxGeometry y="52" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="WiG1OMdd3NblhOqTEnWN-21" value="Visit&#xa;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-          <mxGeometry x="1120" y="150" width="160" height="78" as="geometry">
+          <mxGeometry x="1120" y="150" width="160" height="104" as="geometry">
             <mxRectangle x="667" y="560" width="60" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -46,6 +46,9 @@
         </mxCell>
         <mxCell id="WiG1OMdd3NblhOqTEnWN-103" value="relationToInmate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="WiG1OMdd3NblhOqTEnWN-21" vertex="1">
           <mxGeometry y="52" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Hn-8PbhHD07aV65eNqG0-4" value="idOfVisitor" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="WiG1OMdd3NblhOqTEnWN-21">
+          <mxGeometry y="78" width="160" height="26" as="geometry" />
         </mxCell>
         <object label="Inmate" id="WiG1OMdd3NblhOqTEnWN-30">
           <mxCell style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
