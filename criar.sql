@@ -54,7 +54,7 @@ CREATE TABLE SENTENCE(
 );
 CREATE TABLE STAFF(
     staffId INTEGER PRIMARY KEY NOT NULL,
-    nome TEXT,
+    name TEXT,
     birthDate DATE,
     age AS CURDATE() - birthDate,
     
