@@ -58,4 +58,12 @@ CREATE TABLE STAFF(
     birthDate DATE,
     age AS CURDATE() - birthDate,
     
-)
+);
+CREATE TABLE GUARD(
+    id INTEGER PRIMARY KEY NOT NULL,
+    startingDate DATE,
+    experience INTEGER,
+    assignedTo INTEGER,
+    FOREIGN KEY (id) REFERENCES STAFF(staffId),
+    FOREIGN KEY (assignedTo) REFERENCES CORRIDOR(corridorId)
+);
