@@ -1,2 +1,2 @@
 # BD_PrisonProject
-Diagrama para Base de Dados 2021
+Projecto para Base de Dados da L.EIC, FEUP 2021/2022
