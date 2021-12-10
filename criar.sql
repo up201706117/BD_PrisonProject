@@ -3,8 +3,7 @@ CREATE TABLE VISIT(
     DATE date,
     INTEGER visitorId,
     TEXT relationToInmate,
-    PRIMARY KEY (date),
-    PRIMARY KEY (visitorId)
+    PRIMARY KEY (date,visitorId)
 
 )
 
