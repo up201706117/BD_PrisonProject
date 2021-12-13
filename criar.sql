@@ -82,7 +82,7 @@ CREATE TABLE ASSIGNED_DOCTOR(
    
 );
 CREATE TABLE MEDICAL_APPOINTMENT(
-    appointmentDate DATE NOT NULL,
+    medicalAppointmentDate DATE NOT NULL,
     reason TEXT,
     doctorId INTEGER,
     inmateId INTEGER PRIMARY KEY,
@@ -136,4 +136,3 @@ CREATE TABLE CRIME(
     crimeDescription TEXT,
     CHECK (length(crimeDescription) >= 3 AND length(crimeDescription) <= 180) 
 );
-

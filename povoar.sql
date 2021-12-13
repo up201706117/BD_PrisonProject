@@ -1,3 +1,4 @@
+
 PRAGMA foreign_keys = on;
 
 INSERT INTO STAFF (staffId, staffName, birthDate) values (001, 'Stephan Ayscough' ,'13.08.1943');
@@ -11,9 +12,9 @@ INSERT INTO STAFF (staffId, staffName, birthDate) values (008, 'Karia Corzon', '
 INSERT INTO STAFF (staffId, staffName, birthDate) values (009, 'Celesta Jozwicki', '25.03.1976');
 INSERT INTO STAFF (staffId, staffName, birthDate) values (010, 'Ravid Lightewood', '06.04.1918');
 
-INSERT INTO DOCTOR (doctorId, licenseNumber, speciality) values (001, '65-626-5153', 'neurology');
-INSERT INTO DOCTOR (doctorId, licenseNumber, speciality) values (002, '35-745-9388', 'psychiatry');
-INSERT INTO DOCTOR (doctorId, licenseNumber, speciality) values (003, '36-754-9470', 'surgery');
+INSERT INTO DOCTOR (doctorId, licenseNumber, specialty) values (001, '65-626-5153', 'neurology');
+INSERT INTO DOCTOR (doctorId, licenseNumber, specialty) values (002, '35-745-9388', 'psychiatry');
+INSERT INTO DOCTOR (doctorId, licenseNumber, specialty) values (003, '36-754-9470', 'surgery');
 
 INSERT INTO PRISON_BLOCK (blockId, supervisor) values (01, NULL);
 INSERT INTO PRISON_BLOCK (blockId, supervisor) values (02, NULL);
@@ -24,18 +25,18 @@ INSERT INTO CORRIDOR (corridorId, layout, blockId) values (03, 202, 02);
 INSERT INTO CORRIDOR (corridorId, layout, blockId) values (04, 101, 02);
 
 
-INSERT INTO CELL (cellNumber, cell_type, corridorId) values (001, 'solitary',01);
-INSERT INTO CELL (cellNumber, cell_type, corridorId) values (002, 'solitary',01);
-INSERT INTO CELL (cellNumber, cell_type, corridorId) values (003, 'normal',01);
-INSERT INTO CELL (cellNumber, cell_type, corridorId) values (004, 'normal',02);
-INSERT INTO CELL (cellNumber, cell_type, corridorId) values (005, 'normal',02);
-INSERT INTO CELL (cellNumber, cell_type, corridorId) values (006, 'normal',02);
-INSERT INTO CELL (cellNumber, cell_type, corridorId) values (007, 'normal',03);
-INSERT INTO CELL (cellNumber, cell_type, corridorId) values (008, 'normal',03);
-INSERT INTO CELL (cellNumber, cell_type, corridorId) values (009, 'normal',03);
-INSERT INTO CELL (cellNumber, cell_type, corridorId) values (010, 'normal',03);
-INSERT INTO CELL (cellNumber, cell_type, corridorId) values (011, 'normal',04);
-INSERT INTO CELL (cellNumber, cell_type, corridorId) values (012, 'normal',04);
+INSERT INTO CELL (cellNumber, cellType, corridorId) values (001, 'solitary',01);
+INSERT INTO CELL (cellNumber, cellType, corridorId) values (002, 'solitary',01);
+INSERT INTO CELL (cellNumber, cellType, corridorId) values (003, 'normal',01);
+INSERT INTO CELL (cellNumber, cellType, corridorId) values (004, 'normal',02);
+INSERT INTO CELL (cellNumber, cellType, corridorId) values (005, 'normal',02);
+INSERT INTO CELL (cellNumber, cellType, corridorId) values (006, 'normal',02);
+INSERT INTO CELL (cellNumber, cellType, corridorId) values (007, 'normal',03);
+INSERT INTO CELL (cellNumber, cellType, corridorId) values (008, 'normal',03);
+INSERT INTO CELL (cellNumber, cellType, corridorId) values (009, 'normal',03);
+INSERT INTO CELL (cellNumber, cellType, corridorId) values (010, 'normal',03);
+INSERT INTO CELL (cellNumber, cellType, corridorId) values (011, 'normal',04);
+INSERT INTO CELL (cellNumber, cellType, corridorId) values (012, 'normal',04);
 
 INSERT INTO INMATE (inmateId, inmateName, birthDate, inCell) values (001, 'Korie Conechie', '21.01.1986', 01);
 INSERT INTO INMATE (inmateId, inmateName, birthDate, inCell) values (002, 'Roley Gages', '05.03.1956', 002);
@@ -106,7 +107,7 @@ INSERT INTO CRIME(crimeId, crimeDescription) values (04, 'carjaking');
 INSERT INTO CRIME(crimeId, crimeDescription) values (05, 'burglary');
 INSERT INTO CRIME(crimeId, crimeDescription) values (06, 'bank robbery');
 INSERT INTO CRIME(crimeId, crimeDescription) values (07, 'theft');
-INSERT INTO CRIME(crimeId, crimeDescription) values (07, 'tax evasion');
+INSERT INTO CRIME(crimeId, crimeDescription) values (08, 'tax evasion');
 
 INSERT INTO VISITS(visitorId, inmateId, visitDate) values (001, 001, '08.10.2005');
 INSERT INTO VISITS(visitorId, inmateId, visitDate) values (002, 002, '04.08.2020');
@@ -165,19 +166,12 @@ INSERT INTO TEAM_SUPERVISOR(supervisor, supervised) values (004, 008);
 INSERT INTO TEAM_SUPERVISOR(supervisor, supervised) values (009, 010);
 INSERT INTO TEAM_SUPERVISOR(supervisor, supervised) values (004, 006);
 
-INSERT INTO MEDICAL_APPOINTMENT(doctorId, inmateId, medicalAppointmentDate, reason) values (001, 014, '05.08.2019');
-INSERT INTO MEDICAL_APPOINTMENT(doctorId, inmateId, medicalAppointmentDate, reason) values (001, 030, '02.03.2008');
-INSERT INTO MEDICAL_APPOINTMENT(doctorId, inmateId, medicalAppointmentDate, reason) values (002, 001, '05.12.2001');
-INSERT INTO MEDICAL_APPOINTMENT(doctorId, inmateId, medicalAppointmentDate, reason) values (003, 044, '21.06.2016');
-INSERT INTO MEDICAL_APPOINTMENT(doctorId, inmateId, medicalAppointmentDate, reason) values (003, 033, '06.06.2002');
-INSERT INTO MEDICAL_APPOINTMENT(doctorId, inmateId, medicalAppointmentDate, reason) values (004, 004, '29.09.2015');
+INSERT INTO MEDICAL_APPOINTMENT(doctorId, inmateId, medicalAppointmentDate, reason) values (001, 014, '05.08.2019',"Broken leg");
+INSERT INTO MEDICAL_APPOINTMENT(doctorId, inmateId, medicalAppointmentDate, reason) values (001, 030, '02.03.2008',"Headache");
+INSERT INTO MEDICAL_APPOINTMENT(doctorId, inmateId, medicalAppointmentDate, reason) values (002, 001, '05.12.2001',"Puncture Wound");
+INSERT INTO MEDICAL_APPOINTMENT(doctorId, inmateId, medicalAppointmentDate, reason) values (003, 044, '21.06.2016',"Blunt Trauma");
+INSERT INTO MEDICAL_APPOINTMENT(doctorId, inmateId, medicalAppointmentDate, reason) values (003, 033, '06.06.2002',"Passed Out");
+INSERT INTO MEDICAL_APPOINTMENT(doctorId, inmateId, medicalAppointmentDate, reason) values (004, 004, '29.09.2015',"Shoulder Pain");
 
 UPDATE PRISON_BLOCK SET supervisor = 004 WHERE blockId = 001;
 UPDATE PRISON_BLOCK SET supervisor = 009 WHERE blockId = 002;
-
-
-
-
-
-
-
