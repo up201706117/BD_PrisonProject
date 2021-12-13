@@ -1,10 +1,1 @@
-INSERT INTO STAFF (staffId, staffName, birthDate) values (001,'Stephan Ayscough', '13.08.1943');
-INSERT INTO STAFF (staffId, staffName, birthDate) values (002,'Thane Letham', '27.12.1914');
-INSERT INTO STAFF (staffId, staffName, birthDate) values (003,'Tiphanie Boome', '21.03.1972');
-INSERT INTO STAFF (staffId, staffName, birthDate) values (004,'Corie Backshill', '25.06.1958');
-INSERT INTO STAFF (staffId, staffName, birthDate) values (005,'Bran Howling', '21.05.1910');
-INSERT INTO STAFF (staffId, staffName, birthDate) values (006,'Kat Treat', '24.12.1927');
-INSERT INTO STAFF (staffId, staffName, birthDate) values (007,'Lenee Trundell', '24.10.1914');
-INSERT INTO STAFF (staffId, staffName, birthDate) values (008,'Karia Corzon', '01.04.1967');
-INSERT INTO STAFF (staffId, staffName, birthDate) values (009,'Celesta Jozwicki', '25.03.1976');
-INSERT INTO STAFF (staffId, staffName, birthDate) values (010,'Ravid Lightewood', '06.04.1918');
+PRAGMA foreign_keys = on;
