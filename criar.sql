@@ -26,7 +26,7 @@ CREATE TABLE GUARD(
     startingDate DATE NOT NULL,
     CHECK (startingDate > '09.11.2001')
     --experience INTEGER,
-    assignedTo INTEGER NOT NULL,
+    assignedTo INTEGER,
     FOREIGN KEY (guardId) REFERENCES STAFF(staffId),
     FOREIGN KEY (assignedTo) REFERENCES CORRIDOR(corridorId)
 );
@@ -47,14 +47,14 @@ CREATE TABLE CORRIDOR(
     corridorId INTEGER PRIMARY KEY,
     --numOfCells INTEGER, --DERIVES FROM LAYOUT
     layout INTEGER NOT NULL,
-    blockId INTEGER NOT NULL,
+    blockId INTEGER,
     FOREIGN KEY (blockId) REFERENCES PRISON_BLOCK(blockID)
 );
 CREATE TABLE CELL(
     cellNumber INTEGER PRIMARY KEY,
     cellType INTEGER NOT NULL,
     --capacity INTEGER NOT NULL, --DERIVES FROM CELLTYPE
-    corridorId INTEGER NOT NULL,
+    corridorId INTEGER,
     FOREIGN KEY (corridorId) REFERENCES CORRIDOR(corridorId)
 );
 CREATE TABLE INMATE(
@@ -69,14 +69,13 @@ CREATE TABLE INMATE(
 );
 CREATE TABLE VISIT(
 
-    visitorId INTEGER NOT NULL,
+    visitorId INTEGER PRIMARY KEY,
     relationToInmate TEXT,
-    PRIMARY KEY (visitDate,visitorId)
 
 );
 CREATE TABLE ASSIGNED_DOCTOR(
-    doctorID INTEGER NOT NULL,
-    blockID INTEGER NOT NULL,
+    doctorID INTEGER,
+    blockID INTEGER,
 
     FOREIGN KEY (doctorId) REFERENCES DOCTOR(doctorId),    
     FOREIGN KEY (blockId) REFERENCES PRISON_BLOCK(blockId)
@@ -85,7 +84,7 @@ CREATE TABLE ASSIGNED_DOCTOR(
 CREATE TABLE MEDICAL_APPOINTMENT(
     appointmentDate DATE NOT NULL,
     reason TEXT,
-    doctorId INTEGER NOT NULL,
+    doctorId INTEGER,
     inmateId INTEGER PRIMARY KEY,
 
     --CHECK (appointmentDate > SENTENCE.startingDate)
@@ -94,8 +93,8 @@ CREATE TABLE MEDICAL_APPOINTMENT(
     FOREIGN KEY (inmateId) REFERENCES INMATE(inmateId)
 );
 CREATE TABLE SENTENCE(
-    inmateId INTEGER NOT NULL,
-    crimeId INTEGER NOT NULL,
+    inmateId INTEGER,
+    crimeId INTEGER,
     
     duration INTEGER NOT NULL,
     startingDate DATE NOT NULL,
