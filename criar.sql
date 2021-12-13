@@ -23,7 +23,7 @@ CREATE TABLE STAFF(
 );
 CREATE TABLE GUARD(
     guardId INTEGER PRIMARY KEY,
-    startingDate DATE NOT NULL CHECK (startingDate > '09.11.2001'),
+    startingDate DATE NOT NULL CHECK (startingDate>date('09-11-2001')),
     --experience INTEGER,
     assignedTo INTEGER,
     FOREIGN KEY (guardId) REFERENCES STAFF(staffId),
@@ -38,9 +38,10 @@ CREATE TABLE DOCTOR(
 CREATE TABLE PRISON_BLOCK(
     blockID INTEGER PRIMARY KEY,
     supervisor INTEGER UNIQUE,
-    FOREIGN KEY (supervisor) REFERENCES GUARD(guardId),
+    FOREIGN KEY (supervisor) REFERENCES GUARD(guardId)
+    --numSupervisors INTEGER AS SELECT COUNT(supervisor) PRISON_BLOCK;
+    --CHECK (numSupervisors<=5)
 
-    CHECK (supervisor <= 1)
 );
 CREATE TABLE CORRIDOR(
     corridorId INTEGER PRIMARY KEY,
@@ -62,9 +63,11 @@ CREATE TABLE INMATE(
     birthDate DATE NOT NULL,
     --age INTEGER AS CURDATE()-birthDate,
     --CHECK (age>=18),
-    inCell INTEGER,
+    --sizePrison INTEGER AS SELECT COUNT(InmateID) FROM INMATE;
     sizePrison INTEGER CHECK (sizePrison < 500),
+    inCell INTEGER,
     FOREIGN KEY (inCell) REFERENCES CELL(cellNumber)
+    
     
 );
 CREATE TABLE VISIT(
