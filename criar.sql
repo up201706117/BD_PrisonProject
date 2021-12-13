@@ -14,7 +14,7 @@ DROP TABLE IF EXISTS CRIME;
 DROP TABLE IF EXISTS DOCTOR;
 
 CREATE TABLE STAFF(
-    staffId INTEGER PRIMARY KEY NOT NULL,
+    staffId INTEGER PRIMARY KEY,
     staffName TEXT,
     birthDate DATE
     --age AS CURDATE() - birthDate
@@ -22,7 +22,7 @@ CREATE TABLE STAFF(
     
 );
 CREATE TABLE GUARD(
-    guardId INTEGER PRIMARY KEY NOT NULL,
+    guardId INTEGER PRIMARY KEY,
     startingDate DATE NOT NULL,
     CHECK (startingDate > '09.11.2001')
     --experience INTEGER,
@@ -31,7 +31,7 @@ CREATE TABLE GUARD(
     FOREIGN KEY (assignedTo) REFERENCES CORRIDOR(corridorId)
 );
 CREATE TABLE DOCTOR(
-    doctorId INTEGER PRIMARY KEY NOT NULL,
+    doctorId INTEGER PRIMARY KEY,
     licenseNumber INTEGER UNIQUE,
     specialty TEXT,
     FOREIGN KEY (doctorId) REFERENCES STAFF(staffId)
@@ -44,21 +44,21 @@ CREATE TABLE PRISON_BLOCK(
     CHECK (supervisor <= 1)
 );
 CREATE TABLE CORRIDOR(
-    corridorId INTEGER PRIMARY KEY NOT NULL,
+    corridorId INTEGER PRIMARY KEY,
     --numOfCells INTEGER, --DERIVES FROM LAYOUT
     layout INTEGER NOT NULL,
     blockId INTEGER NOT NULL,
     FOREIGN KEY (blockId) REFERENCES PRISON_BLOCK(blockID)
 );
 CREATE TABLE CELL(
-    cellNumber INTEGER PRIMARY KEY NOT NULL,
+    cellNumber INTEGER PRIMARY KEY,
     cellType INTEGER NOT NULL,
     --capacity INTEGER NOT NULL, --DERIVES FROM CELLTYPE
     corridorId INTEGER NOT NULL,
     FOREIGN KEY (corridorId) REFERENCES CORRIDOR(corridorId)
 );
 CREATE TABLE INMATE(
-    inmateId INTEGER PRIMARY KEY NOT NULL,
+    inmateId INTEGER PRIMARY KEY,
     inmateName TEXT NOT NULL,
     birthDate DATE NOT NULL,
     --age INTEGER AS CURDATE()-birthDate,
@@ -86,7 +86,7 @@ CREATE TABLE MEDICAL_APPOINTMENT(
     appointmentDate DATE NOT NULL,
     reason TEXT,
     doctorId INTEGER NOT NULL,
-    inmateId INTEGER PRIMARY KEY NOT NULL,
+    inmateId INTEGER PRIMARY KEY,
 
     --CHECK (appointmentDate > SENTENCE.startingDate)
 
@@ -117,7 +117,7 @@ CREATE TABLE SENTENCE(
 );
 CREATE TABLE TEAM_SUPERVISOR(
     supervisor INTEGER NOT NULL,
-    supervised INTEGER PRIMARY KEY NOT NULL,
+    supervised INTEGER PRIMARY KEY,
     FOREIGN KEY (supervised) REFERENCES GUARD (guardId)
 );
 CREATE TABLE VISITS(
@@ -125,7 +125,7 @@ CREATE TABLE VISITS(
     visitDate DATE NOT NULL,    
     inmateId INTEGER NOT NULL,
 
-    PRIMARY KEy (visitorId,visitDate),
+    PRIMARY KEY (visitorId,visitDate),
     FOREIGN KEY (visitorId) REFERENCES VISIT(visitorId),
     FOREIGN KEY (inmateId) REFERENCES INMATE(inmateId)
 
@@ -133,7 +133,7 @@ CREATE TABLE VISITS(
  
 );
 CREATE TABLE CRIME(
-    crimeId INTEGER PRIMARY KEY NOT NULL,
+    crimeId INTEGER PRIMARY KEY,
     crimeDescription TEXT
     CHECK (length(crimeDescription) >= 3 AND length(crimeDescription) <= 180) 
 );
