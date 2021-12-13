@@ -24,7 +24,7 @@ CREATE TABLE STAFF(
 CREATE TABLE GUARD(
     guardId INTEGER PRIMARY KEY,
     startingDate DATE NOT NULL,
-    CHECK (startingDate > '09.11.2001')
+    CHECK (startingDate > '09.11.2001'),
     --experience INTEGER,
     assignedTo INTEGER,
     FOREIGN KEY (guardId) REFERENCES STAFF(staffId),
@@ -64,13 +64,13 @@ CREATE TABLE INMATE(
     --age INTEGER AS CURDATE()-birthDate,
     --CHECK (age>=18),
     inCell INTEGER,
-    FOREIGN KEY (inCell) REFERENCES CELL(cellNumber)
+    FOREIGN KEY (inCell) REFERENCES CELL(cellNumber),
     sizePrison INTEGER CHECK (sizePrison < 500)
 );
 CREATE TABLE VISIT(
 
     visitorId INTEGER PRIMARY KEY,
-    relationToInmate TEXT,
+    relationToInmate TEXT
 
 );
 CREATE TABLE ASSIGNED_DOCTOR(
@@ -133,7 +133,7 @@ CREATE TABLE VISITS(
 );
 CREATE TABLE CRIME(
     crimeId INTEGER PRIMARY KEY,
-    crimeDescription TEXT
+    crimeDescription TEXT,
     CHECK (length(crimeDescription) >= 3 AND length(crimeDescription) <= 180) 
 );
 
